@@ -1,0 +1,64 @@
+/* ************************************************************************** */
+/* BACKOFFICE *************************************************************** */
+/* ************************************************************************** */
+ul ul{
+    //display: none;
+}
+/* TOP BAR ****************************************************************** */
+.bk-bar{
+    background: #484848;
+    color: #fff;
+}
+.bk-bar h1{
+    color: #fff;
+}
+.bk-bar ul, .bk-menu ul{
+    list-style: none;
+}
+.bk-bar li{
+    display: inline-block;
+}
+.bk-deconnexion{
+    margin-top: 15px;
+}
+/**/
+.bk-client-menu{
+    background: #a1a1a1;
+    height: 5vh;
+}
+.bk-menu ul{
+    margin-left: 0px;
+}
+header{
+    padding: 0px;
+}
+.bk-info-titre{
+    border-top: 4px solid;
+    border-color: #008CBA;
+    height: 5vh;
+    border-bottom: 1px solid;
+    border-color: #008CBA;
+    margin-bottom: 15px;
+}
+.bk-reservation-menu{
+    background: #cccccc;
+    height: 5vh;
+}
+.bk-reservation-menu ul{
+    background: #e9e1e1;
+}
+.bk-ligne-bottom{
+    border-bottom: 1px solid;
+    border-color: #008CBA;
+    margin-bottom: 15px;
+}
+.bk-menu{
+    background-color: #008CBA;
+}
+.bk-sous-menu{
+    background-color: #6699ff;
+    
+}
+.bk-menu a{
+    color: #fff;
+}

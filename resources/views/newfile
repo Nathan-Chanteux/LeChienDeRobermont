@@ -1,0 +1,123 @@
+
+
+
+
+@section('rubrique')
+    @foreach ($listeRubriques as $rubriques)
+        <article data-idRub="{{ $rubriques->slug }}">
+            <h1>{{ $rubriques->titre }}</h1>
+            <p>{{ $rubriques->texte }}</p>
+        </article>
+    @endforeach
+@endsection
+
+
+
+@foreach ($listeArticles as articles)
+    @if($articles->RubriquesId ==1)
+{{$articles->titre}}
+    @endif
+    @endforeach
+
+
+<p><span lang="\"FR\"">Nous travaillons d’une manière positive, c’est-à-dire en privilégiant les récompenses plutôt que les sanctions. </span><span lang="\"FR\"">Mais tout mauvais comportement tel que : agressivité, aboiements intempestifs… sera fermement réprimandé.</span></p><p><span lang="\"FR\"">Nos objectifs sont l’éducation et l’apprentissage du programme d’obéissance reconnu par l’URCSH.</span></p><p class="\"MsoNormal\""><span lang="\"FR\"">Mais attention, pas d’obéissance sans discipline ! Le maitre doit s’investir dans le travail. L’instructeur est là pour le guider dans sa démarche, pas pour le remplacer.</span></p>                                
+
+
+
+<ul><li>Accès facile</li><li>Parking aisé</li><li>Terrain spacieux clôturé</li><li>Local accueillant</li><li>Toilettes P.M.R.</li><li>Terrasse</li><li>Possibilité de promenade aux alentours</li></ul>
+
+<ul><li><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Présidente :     Roland Chantal ( depuis le 16/10/2001)</span></li><li><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Secrétaire :      Deltour Nadine ( depuis 2004)</span></li><li><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Trésorière :      Matwitchouck Magali ( depuis le 14/12/2012)</span></li><li><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Vice-trésorier : Joly willy ( depuis le 27/10/2007)</span></li></ul>
+
+<p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Le club a été fondé le 5 octobre 1922. Il est directement affilié à l’Union Royale Cynologique de la Saint-Hubert (URCSH), sous le matricule 0080 et appelé « Le Chien de Défense de Robermont »</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Ses activités ont débuté sur un terrain jouxtant le cimetière de Robermont, rue de Herve. En 1974, suite à l’extension de ce dernier, le club s’est établi rue Malvaux à Grivegnée, sur un terrain privé. Jusqu’à cette époque, on travaillait en « ring », ce qui explique la dénomination « Chien de Défense ». On y dressait des bergers allemands et des bergers malinois.</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">En 1986, l’ancienne buvette est remplacée par un nouveau local, construit par l’équipe et inauguré le 30 janvier 1993.</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Suite à l’évolution et à la demande des amateurs, une section « obéissance » voit le jour le 6 septembre 1991. L’accroissement du nombre de membres nécessite un nouvel horaire d’entrainement. Il prend cours le 14 juillet 1992. A partir de ce moment, les entrainements en ring ont lieu les mardis et les jeudis et ceux des « compagnons » les mercredis et dimanches.</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Le 31 décembre 1996, la section « ring » est définitivement fermée. Plus aucun coucours 1B n’aura désormais lieu.</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">En 1996, le club opte pour le statut d’ASBL. </span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">En aout 2007, suite à la vente du terrain rue Malvaux, l’ASBL est contrainte de chercher un nouvel emplacement.</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">En mai 2012, le club s’installe sur un terrain communal, situé voie Mélotte à Grivegnée. Grâce à une équipe dynamique, le club ne cesse de prospérer.</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Le 3 aout 2012, l’URCSH accepte la nouvelle dénomination du club : </span><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">EDUCATION CANINE « LE CHIEN DE ROBERMONT » ASBL</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">Le comité actuel se compose de </span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">&#8211; Présidente :     Roland Chantal ( depuis le 16/10/2001)</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">&#8211; Secrétaire :      Deltour Nadine ( depuis 2004)</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">&#8211; Trésorière :      Matwitchouck Magali ( depuis le 14/12/2012)</span></p><p><span lang="\&quot;\\&quot;\\\\&quot;\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;FR\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&quot;\\\\\\\\\\\\\\\\&quot;\\\\\\\\&quot;\\\\&quot;\\&quot;\&quot;">&#8211; Vice-trésorier : Joly willy ( depuis le 27/10/2007)</span></p>
+
+
+
+<p><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">Les cours ont lieu 2 fois par semaine : mercredi soir et dimanche matin.</span></p><p><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">Le montant de l’inscription est de 50 euros par an et par chien. </span><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">Pour les chiens supplémentaires de propriétaires vivant à la même adresse, il s’élève à 25 euros par an et par chien.</span></p><p><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">Les entrainements coutent 2 euros la séance. Ils seront payés spontanément au comptoir avant l’entrainement. ( 1 euro pour les chiens de 3 à 6 mois).</span></p><p><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">La première fois, munissez-vous </span></p><ul><li><span lang="\&quot;\\&quot;FR\\&quot;\&quot;"> </span><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">du passeport du chien (carte de vaccination)</span></li><li><span lang="\&quot;\\&quot;FR\\&quot;\&quot;"> </span><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">d’une laisse d’un mètre 20 plus ou moins</span></li><li><span lang="\&quot;\\&quot;FR\\&quot;\&quot;"> </span><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">d’un collier (pas de harnais)</span></li><li><span lang="\&quot;\\&quot;FR\\&quot;\&quot;"> </span><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">d’un jouet</span></li><li><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">de friandises.</span></li></ul><p><span lang="\&quot;\\&quot;FR\\&quot;\&quot;">Vous réglez votre séance et si notre méthode de travail vous satisfait, vous payez le montant de l’affiliation au cours suivant. Vous pouvez vous affilier dès la première fois si votre décision est prise.</span></p>
+
+
+
+
+
+<section id="section3" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
+    <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
+@foreach ($listeArticles as $articles)
+    @if ($articles->RubriquesId == 3 )
+        @if( $articles->photo == NULL) 
+        <article>
+            <h2 class="text-center transform titreArticle ">{!!html_entity_decode($articles->titre)!!}</h2>
+            <div class="article row lato  ">
+                <div>
+                    {!!html_entity_decode($articles->texte)!!}
+                </div>
+            </div>
+        </article>
+        @else
+        <article>
+            <h2 class="text-center transform titreArticle ">{!!html_entity_decode($articles->titre)!!}</h2>
+            <div class="article row lato  ">
+                <div class="text-center transform thumb">
+                    <img width="424" height="283" src="{{ asset('/img/'.$articles->photo) }}" class="attachment-post-thumbnail wp-post-image" alt="{{ $articles->titre }}">
+                </div>
+                <div>
+                    {!!html_entity_decode($articles->texte)!!}
+                </div>
+            </div>
+        </article>
+        @endif
+    @endif
+@endforeach
+</section>
+@endif
+@if ($rubriques->idRubriques == 4 )         
+<section id="section4" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
+    <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
+@foreach ($listeArticles as $articles)
+    @if ($articles->RubriquesId == 4 )
+        @if( $articles->photo == NULL)
+        <article>
+            <h2 class="text-center transform titreArticle ">{{ $rubriques->titre }}</h2>
+            <div class="article row lato  ">
+                <div>
+                    {!!html_entity_decode($articles->texte)!!}
+                </div>
+            </div>
+        </article>
+        @else
+        @endif
+    @endif
+@endforeach
+</section>
+@endif
+@if ($rubriques->idRubriques == 5 )
+<section id="section5" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
+    <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
+<article>
+@foreach ($listeArticles as $articles)
+    @if ($articles->RubriquesId == 5 )
+        @if( $articles->photo == NULL)
+            {{--*/ $var = 0 /*--}}
+            @if ($var == 0)
+                <h2 class="text-center transform titreArticle">{{ $articles->titre }}</h2>
+            <div class="article row lato  ">
+                <div class="text-center transform thumb"></div>
+                <div>
+                    <div id="gallery-1" class="gallery galleryid-35 gallery-columns-3 gallery-size-thumbnail">
+            {{--*/ $var = $var + 1 /*--}}            
+            @endif
+        @else
+                    <dl class="gallery-item">
+                        <dt class="gallery-icon landscape">
+                            <a href="{{ asset('/img/'.$articles->photo) }}" data-slb-group="35" data-slb-active="1" data-slb-internal="0"><img width="150" height="150" src="{{ asset('/img/'.$articles->photo) }}" class="attachment-thumbnail" alt="{{ $articles->titre }}"></a>
+                        </dt>
+                    </dl>
+        @endif
+    @endif
+@endforeach     
+                    <br style="clear: both">
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+@endif
+

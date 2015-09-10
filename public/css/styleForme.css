@@ -1,0 +1,33 @@
+.W1080{
+    max-width: 1080px;
+    margin: 0 auto;
+    //height: 100vh;
+}
+.H10VH{
+    height: 10vh;
+}
+.padding-left-none{
+    padding-left: 0px;
+}
+.padding-right-none{
+    padding-right: 0px;
+}
+
+.active{
+    border-bottom: 2px solid;
+    border-color: #007ba4;
+}
+.no-display{
+    display: none;
+}
+.inline-block{
+    display: inline-block;
+}
+.label, .button{
+    font-size: 1.2em;
+    font-family: calibri;
+}
+.fixe{
+    position : fixed;
+    top : 0;
+}
