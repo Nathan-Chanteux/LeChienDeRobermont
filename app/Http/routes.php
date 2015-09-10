@@ -22,7 +22,8 @@ Route::get('/admin/article','Articles\ArticlesController@show');
 Route::get('/admin/article/ajout','Articles\ArticlesController@create');
 Route::post('/admin/article/add','Articles\ArticlesController@store');
 Route::get('/admin/article/modification/{slugArticle}','Articles\ArticlesController@edit');
-Route::get('/admin/article/up','Articles\ArticlesController@update');
+Route::post('/admin/article/up','Articles\ArticlesController@update');
+Route::get('/admin/article/supprimer/{slugArticle}','Articles\ArticlesController@destroy');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

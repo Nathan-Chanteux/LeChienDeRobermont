@@ -57,8 +57,12 @@ header{
 }
 .bk-sous-menu{
     background-color: #6699ff;
-    
+    padding-left: 15px;
 }
 .bk-menu a{
     color: #fff;
+}
+.bk-menu a:hover{
+    border-bottom: 1px solid;
+    border-color: #fff;
 }

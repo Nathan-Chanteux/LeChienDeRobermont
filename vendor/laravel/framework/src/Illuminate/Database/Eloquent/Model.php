@@ -116,7 +116,7 @@ abstract class Model implements ArrayAccess, Arrayable, Jsonable, JsonSerializab
 	 *
 	 * @var array
 	 */
-	protected $fillable = array();
+	protected $fillable = array('rubriques_id');
 
 	/**
 	 * The attributes that aren't mass assignable.

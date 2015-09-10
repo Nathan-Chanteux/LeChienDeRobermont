@@ -3,7 +3,7 @@
 @section('contenu')
 <div id="pages" class="trans" style="width: 9096px; right: 0%; height: 2188px;">
 @foreach ($listeRubriques as $rubriques)
-@if ($rubriques->idRubriques == 1 )
+@if ($rubriques->id == 1 )
 <section id="section1" class="page-systeme page-accueil  page-actuelle" style="width: 1516px; min-height: 796px;">
     <h1 class="text-center transform stroke">Le <span class="grand">chien</span> <br>de Robermont</h1>
     <p class="text-center transform">ASBL - Education canine</p>
@@ -25,12 +25,12 @@
     @endforeach
 </section> 
 @endif
-@if ($rubriques->idRubriques == 2 )
+@if ($rubriques->id == 2 )
             
 <section id="section2" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
     <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
 @foreach ($listeArticles as $articles)
-        @if ($articles->RubriquesId == 2 )
+        @if ($articles->rubriques_id == 2 )
             @if( $articles->photo == NULL)    
     <article>
         <h2 class="text-center transform titreArticle ">{!!html_entity_decode($articles->titre)!!}</h2>
@@ -57,12 +57,12 @@
 @endforeach
 </section>
 @endif
-@if ($rubriques->idRubriques == 3 )
+@if ($rubriques->id == 3 )
             
 <section id="section3" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
     <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
 @foreach ($listeArticles as $articles)
-    @if ($articles->RubriquesId == 3 )
+    @if ($articles->rubriques_id == 3 )
         @if( $articles->photo == NULL) 
         <article>
             <h2 class="text-center transform titreArticle ">{!!html_entity_decode($articles->titre)!!}</h2>
@@ -89,11 +89,11 @@
 @endforeach
 </section>
 @endif
-@if ($rubriques->idRubriques == 4 )         
+@if ($rubriques->id == 4 )         
 <section id="section4" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
     <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
 @foreach ($listeArticles as $articles)
-    @if ($articles->RubriquesId == 4 )
+    @if ($articles->rubriques_id == 4 )
         @if( $articles->photo == NULL)
         <article>
             <h2 class="text-center transform titreArticle ">{{ $rubriques->titre }}</h2>
@@ -109,12 +109,12 @@
 @endforeach
 </section>
 @endif
-@if ($rubriques->idRubriques == 5 )
+@if ($rubriques->id == 5 )
 <section id="section5" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
     <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
 <article>
 @foreach ($listeArticles as $articles)
-    @if ($articles->RubriquesId == 5 )
+    @if ($articles->rubriques_id == 5 )
         @if( $articles->photo == NULL)
             {{--*/ $var = 0 /*--}}
             @if ($var == 0)
@@ -141,14 +141,14 @@
     </article>
 </section>
 @endif
-@if ($rubriques->idRubriques == 6 )                        
+@if ($rubriques->id == 6 )                        
             
             
             
 <section id="contact-page" class="page-systeme page-contenu" style="width: 1516px; min-height: 796px;">
     <h1 class="text-center transform stroke titrePage">{{ $rubriques->titre }}</h1>
 @foreach ($listeArticles as $articles)
-    @if ($articles->RubriquesId == 6 )
+    @if ($articles->rubriques_id == 6 )
         <article>
             <h2 class="text-center transform titreArticle">{{ $articles->titre }}</h2>
     <div class="article row lato  ">

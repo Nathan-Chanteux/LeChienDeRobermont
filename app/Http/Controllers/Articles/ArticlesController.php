@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Articles;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller {
@@ -28,18 +29,26 @@ class ArticlesController extends Controller {
     * @return Response
     */
        public function store(Request $request){
-       
+           
            $article = new \App\Entity\Articles\Articles;
            $article->titre = $request->input('titre');
            $article->texte = $request->input('texte');
-           $article->RubriquesId = $request->input('RubriqueId');
+           $article->rubriques_id = $request->input('RubriqueId');
            $article->home = $request->input('home');
-           if(!empty($request->input('photo'))) $article->photo = $request->input('photo');
            $article->slug = $this->creerSlug($request->input('titre'));
+           
+           //var_dump($request->input('photo'));
+           if(null !== $request->file('photo')):
+               $nomPhoto = $article->slug.'.'.$request->file('photo')->getClientOriginalExtension();
+               $request->file('photo')->move(base_path().'/public/img/Upload/',$nomPhoto);
+               $article->photo = $nomPhoto;
+               var_dump($nomPhoto);
+           endif;
+           
            
            $article->save();
            
-           //return redirect()->route('/admin/article');           
+           return redirect('/admin/article/ajout')->with('message', 'L\'article à bien été ajouter.');        
        }
     /**
     * Display the specified resource.
@@ -78,9 +87,30 @@ class ArticlesController extends Controller {
     * @param  int  $id
     * @return Response
     */
-        public function update(){
+        public function update(Request $request){
             
-            $article = \App\Entity\Articles\Articles::findOrFail($id);
+            $article = \App\Entity\Articles\Articles::where('slug',$request->input('slugArticle'))->firstOrFail();
+            
+            //var_dump($request->input('titre'));
+            $article->titre = $request->input('titre');
+            $article->texte = $request->input('texte');
+            $article->home = $request->input('home');
+            $article->slug = $this->creerSlug($request->input('titre'));
+
+            //var_dump($request->file('photo'));
+            if(null !== $request->file('photo')):
+               $nomPhoto = $article->slug.'.'.$request->file('photo')->getClientOriginalExtension();
+               $request->file('photo')->move(base_path().'/public/img/Upload/',$nomPhoto);
+               $article->photo = $nomPhoto;
+               var_dump($nomPhoto);
+           endif;
+            
+            $article->rubriques_id = $request->input('rubriques_id');
+            
+            $article->save();
+            
+            //return redirect()->route('/admin/article');  
+            
         }
 
    /**
@@ -89,9 +119,10 @@ class ArticlesController extends Controller {
     * @param  int  $id
     * @return Response
     */
-        public function destroy($id)
-        {
-                //
+        public function destroy($slug){
+            
+            $article = \App\Entity\Articles\Articles::where('slug',$slug)->firstOrFail();
+            $article->delete();
         }
         
         

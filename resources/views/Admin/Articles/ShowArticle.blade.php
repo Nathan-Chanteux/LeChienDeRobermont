@@ -1,7 +1,6 @@
 @extends('admin')
 
 @section('contenu')
-<section class="W1080">
 @foreach ($listeArticles as $article)
 <div>
     <h1>{{ $article->titre }}</h1>
@@ -11,5 +10,4 @@
     </div>
 </div>
 @endforeach
-</section>
 @endsection
