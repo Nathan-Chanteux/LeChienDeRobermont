@@ -9,14 +9,6 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller {
     
-    public function afficheListeAction(){
-        
-        $listeRubriques = \App\Entity\Rubriques\Rubriques::get();
-        $listeArticles = \App\Entity\Articles\Articles::get();
-        
-        return View('Admin\Articles\ListeArticles', array('listeRubriques' => $listeRubriques, 'listeArticles' => $listeArticles));
-    }
-    
     /**
     * Show the form for creating a new resource.
     *
@@ -55,14 +47,13 @@ class ArticlesController extends Controller {
     * @param  int  $slug
     * @return Response
     */
-        public function show($slug){
-        
-            $article = \App\Entity\Articles\Articles::where('slug',$slug)->firstOrFail();
+        public function show(){
+            
             $listeRubriques = \App\Entity\Rubriques\Rubriques::get();
+            $listeArticles = \App\Entity\Articles\Articles::get();
+        
+            return View('Admin\Articles\ShowArticle', array('listeRubriques' => $listeRubriques, 'listeArticles' => $listeArticles));
             
-            //var_dump($article->titre);
-            
-            return View('Admin\Articles\ShowArticle', array('article' => $article, 'listeRubriques' => $listeRubriques));
         }
 
    /**
@@ -71,9 +62,14 @@ class ArticlesController extends Controller {
     * @param  int  $id
     * @return Response
     */
-        public function edit($id)
+        public function edit($slug)
         {
-                //
+            $article = \App\Entity\Articles\Articles::where('slug',$slug)->firstOrFail();
+            $listeRubriques = \App\Entity\Rubriques\Rubriques::get();
+            
+            //var_dump($article->titre);
+            
+            return View('Admin\Articles\EditArticle', array('article' => $article, 'listeRubriques' => $listeRubriques));
         }
 
    /**
@@ -82,9 +78,9 @@ class ArticlesController extends Controller {
     * @param  int  $id
     * @return Response
     */
-        public function update($id)
-        {
-                //
+        public function update(){
+            
+            $article = \App\Entity\Articles\Articles::findOrFail($id);
         }
 
    /**

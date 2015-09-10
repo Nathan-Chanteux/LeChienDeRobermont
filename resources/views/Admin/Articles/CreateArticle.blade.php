@@ -35,6 +35,7 @@
         </select>
     </div>
     
+    <input type="hidden" name="idArticles" value="{{ $article->idArticles }}">
     <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 
     <input class="button" type="submit" />

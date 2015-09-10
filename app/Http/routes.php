@@ -18,10 +18,11 @@ Route::get('/', function(){
 
 Route::get('/{slugRubrique}','Rubriques\RubriquesController@afficheRubriquesAction');
 
-Route::get('/admin/article','Articles\ArticlesController@afficheListeAction');
+Route::get('/admin/article','Articles\ArticlesController@show');
 Route::get('/admin/article/ajout','Articles\ArticlesController@create');
 Route::post('/admin/article/add','Articles\ArticlesController@store');
-Route::get('/admin/article/modification/{slugArticle}','Articles\ArticlesController@show');
+Route::get('/admin/article/modification/{slugArticle}','Articles\ArticlesController@edit');
+Route::get('/admin/article/up','Articles\ArticlesController@update');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
