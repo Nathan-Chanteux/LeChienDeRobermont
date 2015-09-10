@@ -109,8 +109,7 @@ class ArticlesController extends Controller {
             
             $article->save();
             
-            //return redirect()->route('/admin/article');  
-            
+            return redirect('/admin/article')->with('message', 'L\'article à bien été modifier.');
         }
 
    /**
@@ -123,6 +122,8 @@ class ArticlesController extends Controller {
             
             $article = \App\Entity\Articles\Articles::where('slug',$slug)->firstOrFail();
             $article->delete();
+            
+            return redirect('/admin/article')->with('message', 'L\'article à bien été supprimer.');
         }
         
         

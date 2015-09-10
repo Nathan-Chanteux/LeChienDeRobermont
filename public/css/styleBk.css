@@ -66,3 +66,11 @@ header{
     border-bottom: 1px solid;
     border-color: #fff;
 }
+.show-article{
+    border-bottom: 1px solid;
+    border-color: #008CBA;
+}
+.show-article h1{
+    color: #005580;
+    font-family: calibri;
+}
