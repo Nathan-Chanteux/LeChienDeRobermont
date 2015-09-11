@@ -9,18 +9,28 @@
     <p class="text-center transform">ASBL - Education canine</p>
     @foreach ($listeArticles as $articles)
     @if($articles->home ==1)
+    @if( $articles->photo == NULL)    
     <article>
-        <h2 class="text-center transform titreArticle">{{$articles->titre}}</h2>
+        <h2 class="text-center transform titreArticle ">{!!html_entity_decode($articles->titre)!!}</h2>
         <div class="article row lato  ">
-            
-            <div class="text-center transform thumb">
-                <img width="424" height="283" src="{{ asset('/img/horaire-des-cours.jpg') }}" class="attachment-post-thumbnail wp-post-image" alt="Horaire des cours">
-            </div>
             <div>
                 {!!html_entity_decode($articles->texte)!!}
             </div>
         </div>
     </article>
+        @else
+    <article>
+        <h2 class="text-center transform titreArticle ">{!!html_entity_decode($articles->titre)!!}</h2>
+        <div class="article row lato  ">
+            <div class="text-center transform thumb">
+                <img width="424" height="283" src="{{ asset('/img/'.$articles->photo) }}" class="attachment-post-thumbnail wp-post-image" alt="{{ $articles->titre }}">
+            </div>
+            <div>
+                {!!html_entity_decode($articles->texte)!!}
+            </div>
+        </div>   
+    </article>
+        @endif
     @endif
     @endforeach
 </section> 

@@ -7,7 +7,7 @@
 <form action="{{ URL::asset('/admin/article/up') }}" method="POST" enctype="multipart/form-data">
     <div><label class='label' for="">Titre</label>
         <input type="text" name="titre" value="{{ $article->titre }}" /></div>
-    <div><label class='label' for="">Texte</label><textarea name="" id="">{{ $article->texte }}</textarea></div>
+    <div><label class='label' for="text">Texte</label><textarea name="texte" id="text">{{ $article->texte }}</textarea></div>
     <div>
         <label class='label' for="rubriques_id">Rubrique de l'article</label>
         <select name="rubriques_id" id="RubriqueId">
