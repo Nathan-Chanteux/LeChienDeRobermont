@@ -1,5 +1,9 @@
 @extends('admin')
 
+@section('info')
+    Ajout d'un nouvel article
+@endsection
+
 @section('contenu')
 <form action="{{ URL::asset('/admin/article/add') }}" method="post" enctype="multipart/form-data">
     <div>

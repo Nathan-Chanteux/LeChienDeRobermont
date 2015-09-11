@@ -25,6 +25,9 @@ Route::get('/admin/article/modification/{slugArticle}','Articles\ArticlesControl
 Route::post('/admin/article/up','Articles\ArticlesController@update');
 Route::get('/admin/article/supprimer/{slugArticle}','Articles\ArticlesController@destroy');
 
+Route::post('/auth/user','Users\UsersController@login');
+Route::get('/auth/logout','Users\UsersController@logout');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

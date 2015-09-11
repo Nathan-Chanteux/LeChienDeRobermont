@@ -1,5 +1,9 @@
 @extends('admin')
 
+@section('info')
+    Gestion des articles
+@endsection
+
 @section('contenu')
 @foreach ($listeArticles as $article)
 <div class='show-article'>

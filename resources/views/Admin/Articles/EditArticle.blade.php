@@ -1,5 +1,8 @@
 @extends('admin')
 
+@section('info')
+    Modification de l'article '{{ $article->titre }}'
+@endsection
 @section('contenu')
 <form action="{{ URL::asset('/admin/article/up') }}" method="POST" enctype="multipart/form-data">
     <div><label class='label' for="">Titre</label>

@@ -15,7 +15,7 @@
             <ul>
                 <li class="large-11 columns"><h1>BackOffice - Le Chien De Robermont</h1></li>
                 <li class="large-1 columns bk-deconnexion">
-                    <a href=""><img src="" /></a>
+                    <a href="{{ URL::asset('/auth/logout') }}"><img src="{{ asset('/img/logout.png') }}" alt="Déconnexion" /></a>
                 </li>
             </ul>
         </nav>
@@ -31,7 +31,7 @@
                 </ul>
             </nav>
         </header>
-        <div class='large-9 columns bk-info-titre'>Accueil</div>
+        <div class='large-9 columns bk-info-titre'>@yield('info')</div>
         <main class="large-9 columns">
             @yield('contenu')
         </main>
