@@ -1,3 +1,9 @@
+<!-- 
+    \resources\views\Rubriques\MenuRubriques.blade.php
+    Vue permettant d'afficher le menu principale du site
+    @params: array listeRubriques[int $rubrique->id, string $rubrique->titre, string $rubrique->slug]
+                int $pourcent; int $var
+ -->
 @section('menu')
     <ul class="clearfix text-center " id="menu">
         {{--*/ $var = 2 /*--}}

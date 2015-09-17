@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * \Http\Controllers\Articles\ArticlesController.php
+ */
 namespace App\Http\Controllers\Articles;
 
 use App\Http\Requests;
@@ -9,15 +11,23 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller {
-    
+/*
+ * Spécifie que ce controlleur n'est accessible que si l'on est connecter
+ */     
     public function __construct() {
         $this->middleware('auth');
     }
-    /**
-    * Show the form for creating a new resource.
-    *
-    * @return Response
-    */
+/*
+ * Demande les données nécessaire pour créé le formulaire d'ajout des articles
+ * 
+ * Retourne les données à la vue CreateArticle.blade.php
+ * 
+ * Requête : Rubriques::get() => Va chercher tout le contenu de la table Rubriques
+ *      @params: / 
+ * 
+ * @params: /
+ * @return: array $listeRubriques
+ */ 
     public function create(){
             
         $listeRubriques = \App\Entity\Rubriques\Rubriques::get();
@@ -25,12 +35,15 @@ class ArticlesController extends Controller {
         return View('Admin\Articles\CreateArticle', array('listeRubriques' => $listeRubriques));
     }
     
-    /**
-    * Store a newly created resource in storage.
-    *
-    * @param  Request  $request
-    * @return Response
-    */
+/*
+ * Envois les données nécessaire pour sauvegarder le nouvel ajout
+ * 
+ * Requête : $article->save() => Va sauvegarder les données en base de données
+ *      @params: / 
+ * 
+ * @params: /
+ * @return: /
+ */ 
        public function store(Request $request){
            
            $article = new \App\Entity\Articles\Articles;
@@ -53,12 +66,18 @@ class ArticlesController extends Controller {
            
            return redirect('/admin/article/ajout')->with('message', 'L\'article à bien été ajouter.');        
        }
-    /**
-    * Display the specified resource.
-    *
-    * @param  int  $slug
-    * @return Response
-    */
+/*
+ * Demande les données nécessaire pour créé la liste d'articles pouvant-être modifier/supprimer
+ * 
+ * Retourne les données à la vue ShowArticle.blade.php
+ * 
+ * Requête : Rubriques::get() => Va chercher tout le contenu de la table Rubriques
+ *      @params: / 
+ *         : Articles::get() => Va chercher tout le contenu de la table Articles
+ * 
+ * @params: /
+ * @return: array $listeRubriques, array $listeArticles
+ */ 
         public function show(){
             
             $listeRubriques = \App\Entity\Rubriques\Rubriques::get();
@@ -68,12 +87,19 @@ class ArticlesController extends Controller {
             
         }
 
-   /**
-    * Show the form for editing the specified resource.
-    *
-    * @param  int  $id
-    * @return Response
-    */
+/*
+ * Demande les données nécessaire pour créé le formulaire de modification d'un article
+ * 
+ * Retourne les données à la vue EditArticle.blade.php
+ * 
+ * Requête : Rubriques::get() => Va chercher tout le contenu de la table Rubriques
+ *      @params: / 
+ *         : Articles::where() => Va chercher l'article dont le slug correspond au slug envoyé en paramètre
+ *      @params: string $slug
+ * 
+ * @param: string $slug
+ * @return: array $listeRubriques, array $article
+ */
         public function edit($slug)
         {
             $article = \App\Entity\Articles\Articles::where('slug',$slug)->firstOrFail();
@@ -84,12 +110,15 @@ class ArticlesController extends Controller {
             return View('Admin\Articles\EditArticle', array('article' => $article, 'listeRubriques' => $listeRubriques));
         }
 
-   /**
-    * Update the specified resource in storage.
-    *
-    * @param  int  $id
-    * @return Response
-    */
+/*
+ * Envois les données nécessaire pour sauvegarder la modification
+ * 
+ * Requête : $article->save() => Va sauvegarder les données en base de données
+ *      @params: / 
+ * 
+ * @params: /
+ * @return: /
+ */ 
         public function update(Request $request){
             
             $article = \App\Entity\Articles\Articles::where('slug',$request->input('slugArticle'))->firstOrFail();
@@ -115,12 +144,17 @@ class ArticlesController extends Controller {
             return redirect('/admin/article')->with('message', 'L\'article à bien été modifier.');
         }
 
-   /**
-    * Remove the specified resource from storage.
-    *
-    * @param  int  $id
-    * @return Response
-    */
+/*
+ * Demande les données nécessaire pour la suppression d'un article
+ * Supprime l'article correspondant au slug
+ * 
+ * Requête : Articles::where() => Va chercher l'article dont le slug correspond au slug envoyé en paramètre
+ *      @params: string $slug
+ *         : $article->delete() => Va supprimer l'aricle correspondant au slug
+ * 
+ * @params: /
+ * @return: /
+ */ 
         public function destroy($slug){
             
             $article = \App\Entity\Articles\Articles::where('slug',$slug)->firstOrFail();
@@ -128,8 +162,13 @@ class ArticlesController extends Controller {
             
             return redirect('/admin/article')->with('message', 'L\'article à bien été supprimer.');
         }
-        
-        
+/*
+ * Crée un slug en fonction de la variable $texte
+ * Retourne le slug
+ *  
+ * @param: string $texte
+ * @return: string $texte
+ */  
         public function creerSlug($texte){
 
             $tableau = array

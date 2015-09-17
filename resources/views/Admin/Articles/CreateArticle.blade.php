@@ -1,10 +1,16 @@
 @extends('admin')
-
+<!-- 
+    \resources\views\Admin\Articles\CreateArticle.blade.php
+    Etant le template Admin
+    Vue permettant d'afficher le formulaire d'ajout d'un article
+    @params: array listeRubriques[int $rubrique->id, string $rubrique->titre]
+ -->
 @section('info')
     Ajout d'un nouvel article
 @endsection
 
 @section('contenu')
+<!-- Route: '/admin/article/add'   @params: contenu du formulaire  -->
 <form action="{{ URL::asset('/admin/article/add') }}" method="post" enctype="multipart/form-data">
     <div>
         <label class='label' for="titre">Titre</label>

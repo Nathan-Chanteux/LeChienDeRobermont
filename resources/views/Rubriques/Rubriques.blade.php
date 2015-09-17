@@ -1,5 +1,10 @@
 @extends('app')
-
+<!-- 
+    \resources\views\Rubriques\MenuRubriques.blade.php
+    Vue permettant d'afficher le contenu des rubriques et des articles
+    @params: array listeRubriques[int $rubrique->id, string $rubrique->titre, string $rubrique->slug]
+                array $listeArticles[int $articles->home, string $articles->photo, string $articles->texte, string $articles->titre]
+ -->
 @section('contenu')
 <div id="pages" class="trans" style="width: 9096px; right: 0%; height: 2188px;">
 @foreach ($listeRubriques as $rubriques)

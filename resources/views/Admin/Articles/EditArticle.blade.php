@@ -1,9 +1,18 @@
 @extends('admin')
 
+<!-- 
+    \resources\views\Admin\Articles\EditArticle.blade.php
+    Etant le template Admin
+    Vue permettant d'afficher le formulaire de modification d'un article
+    @params: array listeRubriques[int $rubrique->id, string $rubrique->titre]
+                string $article->rubriques_id, $article->home, $article->slug, $article->id
+ -->
+
 @section('info')
     Modification de l'article '{{ $article->titre }}'
 @endsection
 @section('contenu')
+<!-- Route: '/admin/article/up'   @params: contenu du formulaire  -->
 <form action="{{ URL::asset('/admin/article/up') }}" method="POST" enctype="multipart/form-data">
     <div><label class='label' for="">Titre</label>
         <input type="text" name="titre" value="{{ $article->titre }}" /></div>
